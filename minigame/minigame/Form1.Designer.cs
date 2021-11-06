@@ -48,135 +48,149 @@ namespace minigame
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(49, 43);
+            this.button1.Location = new System.Drawing.Point(37, 35);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 75);
+            this.button1.Size = new System.Drawing.Size(56, 61);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.Location = new System.Drawing.Point(130, 43);
+            this.button2.Location = new System.Drawing.Point(98, 35);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 75);
+            this.button2.Size = new System.Drawing.Size(56, 61);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button3.Location = new System.Drawing.Point(211, 43);
+            this.button3.Location = new System.Drawing.Point(158, 35);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 75);
+            this.button3.Size = new System.Drawing.Size(56, 61);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button4.Location = new System.Drawing.Point(49, 124);
+            this.button4.Location = new System.Drawing.Point(37, 101);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 75);
+            this.button4.Size = new System.Drawing.Size(56, 61);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button5.Location = new System.Drawing.Point(130, 124);
+            this.button5.Location = new System.Drawing.Point(98, 101);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 75);
+            this.button5.Size = new System.Drawing.Size(56, 61);
             this.button5.TabIndex = 4;
             this.button5.UseVisualStyleBackColor = false;
             // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button6.Location = new System.Drawing.Point(211, 124);
+            this.button6.Location = new System.Drawing.Point(158, 101);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 75);
+            this.button6.Size = new System.Drawing.Size(56, 61);
             this.button6.TabIndex = 5;
             this.button6.UseVisualStyleBackColor = false;
             // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button7.Location = new System.Drawing.Point(49, 205);
+            this.button7.Location = new System.Drawing.Point(37, 167);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 75);
+            this.button7.Size = new System.Drawing.Size(56, 61);
             this.button7.TabIndex = 6;
             this.button7.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Gray;
-            this.button8.Location = new System.Drawing.Point(130, 205);
+            this.button8.Location = new System.Drawing.Point(98, 167);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 75);
+            this.button8.Size = new System.Drawing.Size(56, 61);
             this.button8.TabIndex = 7;
             this.button8.UseVisualStyleBackColor = false;
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(211, 205);
+            this.button9.BackColor = System.Drawing.Color.Silver;
+            this.button9.Location = new System.Drawing.Point(158, 167);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 75);
+            this.button9.Size = new System.Drawing.Size(56, 61);
             this.button9.TabIndex = 8;
             this.button9.UseVisualStyleBackColor = false;
             // 
             // round
             // 
             this.round.AutoSize = true;
-            this.round.Location = new System.Drawing.Point(436, 43);
+            this.round.Location = new System.Drawing.Point(327, 35);
+            this.round.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.round.Name = "round";
-            this.round.Size = new System.Drawing.Size(54, 17);
+            this.round.Size = new System.Drawing.Size(42, 13);
             this.round.TabIndex = 9;
             this.round.Text = "Round:";
-            this.round.Click += new System.EventHandler(this.label1_Click);
             // 
             // high_score
             // 
             this.high_score.AutoSize = true;
-            this.high_score.Location = new System.Drawing.Point(436, 263);
+            this.high_score.Location = new System.Drawing.Point(327, 214);
+            this.high_score.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.high_score.Name = "high_score";
-            this.high_score.Size = new System.Drawing.Size(80, 17);
+            this.high_score.Size = new System.Drawing.Size(61, 13);
             this.high_score.TabIndex = 10;
             this.high_score.Text = "High score:";
             // 
             // new_game
             // 
-            this.new_game.Location = new System.Drawing.Point(49, 373);
+            this.new_game.Location = new System.Drawing.Point(37, 303);
+            this.new_game.Margin = new System.Windows.Forms.Padding(2);
             this.new_game.Name = "new_game";
-            this.new_game.Size = new System.Drawing.Size(106, 34);
+            this.new_game.Size = new System.Drawing.Size(80, 28);
             this.new_game.TabIndex = 11;
             this.new_game.Text = "New game";
             this.new_game.UseVisualStyleBackColor = true;
+            this.new_game.Click += new System.EventHandler(this.new_game_Click);
             // 
             // round_value
             // 
             this.round_value.AutoSize = true;
-            this.round_value.Location = new System.Drawing.Point(497, 43);
+            this.round_value.Location = new System.Drawing.Point(373, 35);
+            this.round_value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.round_value.Name = "round_value";
-            this.round_value.Size = new System.Drawing.Size(46, 17);
+            this.round_value.Size = new System.Drawing.Size(13, 13);
             this.round_value.TabIndex = 12;
-            this.round_value.Text = "label1";
+            this.round_value.Text = "0";
             // 
             // high_score_value
             // 
             this.high_score_value.AutoSize = true;
-            this.high_score_value.Location = new System.Drawing.Point(522, 263);
+            this.high_score_value.Location = new System.Drawing.Point(392, 214);
+            this.high_score_value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.high_score_value.Name = "high_score_value";
-            this.high_score_value.Size = new System.Drawing.Size(46, 17);
+            this.high_score_value.Size = new System.Drawing.Size(35, 13);
             this.high_score_value.TabIndex = 13;
             this.high_score_value.Text = "label1";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.high_score_value);
             this.Controls.Add(this.round_value);
             this.Controls.Add(this.new_game);
@@ -191,9 +205,9 @@ namespace minigame
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

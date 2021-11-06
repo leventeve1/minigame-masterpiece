@@ -41,6 +41,8 @@ namespace minigame
             this.round = new System.Windows.Forms.Label();
             this.high_score = new System.Windows.Forms.Label();
             this.new_game = new System.Windows.Forms.Button();
+            this.round_value = new System.Windows.Forms.Label();
+            this.high_score_value = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -152,11 +154,31 @@ namespace minigame
             this.new_game.Text = "New game";
             this.new_game.UseVisualStyleBackColor = true;
             // 
+            // round_value
+            // 
+            this.round_value.AutoSize = true;
+            this.round_value.Location = new System.Drawing.Point(497, 43);
+            this.round_value.Name = "round_value";
+            this.round_value.Size = new System.Drawing.Size(46, 17);
+            this.round_value.TabIndex = 12;
+            this.round_value.Text = "label1";
+            // 
+            // high_score_value
+            // 
+            this.high_score_value.AutoSize = true;
+            this.high_score_value.Location = new System.Drawing.Point(522, 263);
+            this.high_score_value.Name = "high_score_value";
+            this.high_score_value.Size = new System.Drawing.Size(46, 17);
+            this.high_score_value.TabIndex = 13;
+            this.high_score_value.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.high_score_value);
+            this.Controls.Add(this.round_value);
             this.Controls.Add(this.new_game);
             this.Controls.Add(this.high_score);
             this.Controls.Add(this.round);
@@ -191,6 +213,8 @@ namespace minigame
         private System.Windows.Forms.Label round;
         private System.Windows.Forms.Label high_score;
         private System.Windows.Forms.Button new_game;
+        private System.Windows.Forms.Label round_value;
+        private System.Windows.Forms.Label high_score_value;
     }
 }
 

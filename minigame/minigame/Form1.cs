@@ -16,29 +16,76 @@ namespace minigame
         public Form1()
         {
             InitializeComponent();
-            List<Button> gombok = new List<Button>
-            {button1,button2,button3,button4,button5,button6,button7,button8,button9};
         }
 
+        List<int> gep_sorrend = new List<int>() { };
+        List<int> jatekos_sorrend = new List<int>() { };
+        int kör_szám = 0;
+
+        public void kör_fv()
+        {
+            Random rnd = new Random();
+            int sorszam = rnd.Next(1, 10);
+            gep_sorrend.Add(sorszam);
+
+            foreach (var elem in gep_sorrend)
+            {
+                szinezo(elem);
+                Application.DoEvents();
+                Thread.Sleep(400);
+            }
+            jatekos_sorrend = new List<int>();
+            
+        }
+
+        public bool ellenorzes_fv()
+        {
+            if (gep_sorrend.SequenceEqual(jatekos_sorrend))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("vége");
+                return false;
+                
+            }
+        }
 
         private void new_game_Click(object sender, EventArgs e)
         {
             //új játék
-            int kör = 0;
-            round_value.Text = kör.ToString();
+            gep_sorrend = new List<int>();
+            jatekos_sorrend = new List<int>();
+            kör_szám = 0;
 
+            kör_fv();
+            
+        }
 
-            for (int i = 0; i < 5; i++)
+        private void submit_Click(object sender, EventArgs e)
+        {
+            if (ellenorzes_fv())
             {
-                Random rnd = new Random();
-                int sorszam = rnd.Next(1, 10);
-                szinezo(sorszam);
-
-                Application.DoEvents();
-                Thread.Sleep(400);
+                kör_szám++;
+                round_value.Text = kör_szám.ToString();
+                kör_fv();
             }
             
         }
+        private void button_Click(object sender, EventArgs e)
+        {
+            if (sender == button1) jatekos_sorrend.Add(1);
+            if (sender == button2) jatekos_sorrend.Add(2);
+            if (sender == button3) jatekos_sorrend.Add(3);
+            if (sender == button4) jatekos_sorrend.Add(4);
+            if (sender == button5) jatekos_sorrend.Add(5);
+            if (sender == button6) jatekos_sorrend.Add(6);
+            if (sender == button7) jatekos_sorrend.Add(7);
+            if (sender == button8) jatekos_sorrend.Add(8);
+            if (sender == button9) jatekos_sorrend.Add(9);
+        }
+
 
         public void szinezo(int sorszam)
         {
@@ -68,5 +115,6 @@ namespace minigame
 
         }
 
+       
     }
 }

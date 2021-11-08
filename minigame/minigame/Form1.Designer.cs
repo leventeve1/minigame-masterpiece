@@ -43,6 +43,7 @@ namespace minigame
             this.new_game = new System.Windows.Forms.Button();
             this.round_value = new System.Windows.Forms.Label();
             this.high_score_value = new System.Windows.Forms.Label();
+            this.submit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -54,6 +55,7 @@ namespace minigame
             this.button1.Size = new System.Drawing.Size(56, 61);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button_Click);
             // 
             // button2
             // 
@@ -64,6 +66,7 @@ namespace minigame
             this.button2.Size = new System.Drawing.Size(56, 61);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button_Click);
             // 
             // button3
             // 
@@ -74,6 +77,7 @@ namespace minigame
             this.button3.Size = new System.Drawing.Size(56, 61);
             this.button3.TabIndex = 2;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button_Click);
             // 
             // button4
             // 
@@ -84,6 +88,7 @@ namespace minigame
             this.button4.Size = new System.Drawing.Size(56, 61);
             this.button4.TabIndex = 3;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button_Click);
             // 
             // button5
             // 
@@ -94,6 +99,7 @@ namespace minigame
             this.button5.Size = new System.Drawing.Size(56, 61);
             this.button5.TabIndex = 4;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button_Click);
             // 
             // button6
             // 
@@ -104,6 +110,7 @@ namespace minigame
             this.button6.Size = new System.Drawing.Size(56, 61);
             this.button6.TabIndex = 5;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button_Click);
             // 
             // button7
             // 
@@ -114,6 +121,7 @@ namespace minigame
             this.button7.Size = new System.Drawing.Size(56, 61);
             this.button7.TabIndex = 6;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button_Click);
             // 
             // button8
             // 
@@ -124,6 +132,7 @@ namespace minigame
             this.button8.Size = new System.Drawing.Size(56, 61);
             this.button8.TabIndex = 7;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button_Click);
             // 
             // button9
             // 
@@ -134,6 +143,7 @@ namespace minigame
             this.button9.Size = new System.Drawing.Size(56, 61);
             this.button9.TabIndex = 8;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button_Click);
             // 
             // round
             // 
@@ -186,11 +196,22 @@ namespace minigame
             this.high_score_value.TabIndex = 13;
             this.high_score_value.Text = "label1";
             // 
+            // submit
+            // 
+            this.submit.Location = new System.Drawing.Point(158, 269);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(82, 62);
+            this.submit.TabIndex = 14;
+            this.submit.Text = "Submit";
+            this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.submit);
             this.Controls.Add(this.high_score_value);
             this.Controls.Add(this.round_value);
             this.Controls.Add(this.new_game);
@@ -229,6 +250,7 @@ namespace minigame
         private System.Windows.Forms.Button new_game;
         private System.Windows.Forms.Label round_value;
         private System.Windows.Forms.Label high_score_value;
+        private System.Windows.Forms.Button submit;
     }
 }
 

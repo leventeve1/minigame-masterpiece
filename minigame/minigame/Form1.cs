@@ -13,40 +13,60 @@ namespace minigame
 {
     public partial class Form1 : Form
     {
+
+        List<int> gepSorrend = new List<int>() { };
+        List<int> jatekosSorrend = new List<int>() { };
+        int körCounter = 0;
+
+        public static Color button1ColorA = Color.FromArgb(255, 128, 128);
+        public static Color button2ColorA = Color.FromArgb(255, 192, 128);
+        public static Color button3ColorA = Color.FromArgb(255, 255, 128);
+        public static Color button4ColorA = Color.FromArgb(128, 255, 128);
+        public static Color button5ColorA = Color.FromArgb(128, 255, 255);
+        public static Color button6ColorA = Color.FromArgb(128, 128, 255);
+        public static Color button7ColorA = Color.FromArgb(255, 128, 255);
+        public static Color button8ColorA = Color.Gray;
+        public static Color button9ColorA = Color.Silver;
+
+        public static Color button1ColorB = Color.Red;
+        public static Color button2ColorB = Color.Orange;
+        public static Color button3ColorB = Color.Yellow;
+        public static Color button4ColorB = Color.Lime;
+        public static Color button5ColorB = Color.Aqua;
+        public static Color button6ColorB = Color.Blue;
+        public static Color button7ColorB = Color.Fuchsia;
+        public static Color button8ColorB = Color.FromArgb(64,64,64);
+        public static Color button9ColorB = Color.White;
+
         public Form1()
         {
             InitializeComponent();
         }
-
-        List<int> gep_sorrend = new List<int>() { };
-        List<int> jatekos_sorrend = new List<int>() { };
-        int kör_szám = 0;
-
-        public void kör_fv()
+        public void körFV()
         {
-            Random rnd = new Random();
-            int sorszam = rnd.Next(1, 10);
-            gep_sorrend.Add(sorszam);
+            Random randomSzam = new Random();
+            int hanyadikGomb = randomSzam.Next(1, 10);
+            gepSorrend.Add(hanyadikGomb);
 
-            foreach (var elem in gep_sorrend)
+            foreach (var elem in gepSorrend)
             {
                 szinezo(elem);
                 Application.DoEvents();
                 Thread.Sleep(400);
             }
-            jatekos_sorrend = new List<int>();
+            jatekosSorrend = new List<int>();
             
         }
 
-        public bool ellenorzes_fv()
+        public bool ellenorzesFV()
         {
-            if (gep_sorrend.SequenceEqual(jatekos_sorrend))
+            if (gepSorrend.SequenceEqual(jatekosSorrend))
             {
                 return true;
             }
             else
             {
-                MessageBox.Show("vége");
+                MessageBox.Show("Hibás! A játék véget ért!");
                 return false;
                 
             }
@@ -55,66 +75,90 @@ namespace minigame
         private void new_game_Click(object sender, EventArgs e)
         {
             //új játék
-            gep_sorrend = new List<int>();
-            jatekos_sorrend = new List<int>();
-            kör_szám = 0;
-
-            kör_fv();
+            gepSorrend = new List<int>();
+            jatekosSorrend = new List<int>();
+            körCounter = 1;
+            round_value.Text = körCounter.ToString();
+            körFV();
             
         }
 
         private void submit_Click(object sender, EventArgs e)
         {
-            if (ellenorzes_fv())
+            if (ellenorzesFV())
             {
-                kör_szám++;
-                round_value.Text = kör_szám.ToString();
-                kör_fv();
+                körCounter++;
+                round_value.Text = körCounter.ToString();
+                körFV();
             }
-            
+            else if (int.Parse(high_score_value.Text)<körCounter-1)
+            {
+                high_score_value.Text= (körCounter-1).ToString();
+            }
         }
         private void button_Click(object sender, EventArgs e)
         {
-            if (sender == button1) jatekos_sorrend.Add(1);
-            if (sender == button2) jatekos_sorrend.Add(2);
-            if (sender == button3) jatekos_sorrend.Add(3);
-            if (sender == button4) jatekos_sorrend.Add(4);
-            if (sender == button5) jatekos_sorrend.Add(5);
-            if (sender == button6) jatekos_sorrend.Add(6);
-            if (sender == button7) jatekos_sorrend.Add(7);
-            if (sender == button8) jatekos_sorrend.Add(8);
-            if (sender == button9) jatekos_sorrend.Add(9);
+            if (sender == button1) jatekosSorrend.Add(1);
+            if (sender == button2) jatekosSorrend.Add(2);
+            if (sender == button3) jatekosSorrend.Add(3);
+            if (sender == button4) jatekosSorrend.Add(4);
+            if (sender == button5) jatekosSorrend.Add(5);
+            if (sender == button6) jatekosSorrend.Add(6);
+            if (sender == button7) jatekosSorrend.Add(7);
+            if (sender == button8) jatekosSorrend.Add(8);
+            if (sender == button9) jatekosSorrend.Add(9);
         }
-
-
         public void szinezo(int sorszam)
         {
-            //adott gombot átszínezi
-            if (sorszam == 1) button1.BackColor = Color.Red;
-            if (sorszam == 2) button2.BackColor = Color.Orange;
-            if (sorszam == 3) button3.BackColor = Color.Yellow;
-            if (sorszam == 4) button4.BackColor = Color.Lime;
-            if (sorszam == 5) button5.BackColor = Color.Aqua;
-            if (sorszam == 6) button6.BackColor = Color.Blue;
-            if (sorszam == 7) button7.BackColor = Color.Fuchsia;
-            if (sorszam == 8) button8.BackColor = Color.FromArgb(64,64,64);
-            if (sorszam == 9) button9.BackColor = Color.White;
+            //adott gombot átszínezi, majd vissza
+            if (sorszam == 1) button1.BackColor = button1ColorB;
+            if (sorszam == 2) button2.BackColor = button2ColorB;
+            if (sorszam == 3) button3.BackColor = button3ColorB;
+            if (sorszam == 4) button4.BackColor = button4ColorB;
+            if (sorszam == 5) button5.BackColor = button5ColorB;
+            if (sorszam == 6) button6.BackColor = button6ColorB;
+            if (sorszam == 7) button7.BackColor = button7ColorB;
+            if (sorszam == 8) button8.BackColor = button8ColorB;
+            if (sorszam == 9) button9.BackColor = button9ColorB;
 
             Application.DoEvents();
             Thread.Sleep(800);
 
-            button1.BackColor = Color.FromArgb(255, 128, 128);
-            button2.BackColor = Color.FromArgb(255, 192, 128);
-            button3.BackColor = Color.FromArgb(255, 255, 128);
-            button4.BackColor = Color.FromArgb(128, 255, 128);
-            button5.BackColor = Color.FromArgb(128, 255, 255);
-            button6.BackColor = Color.FromArgb(128, 128, 255);
-            button7.BackColor = Color.FromArgb(255, 128, 255);
-            button8.BackColor = Color.Gray;
-            button9.BackColor = Color.Silver;
-
+            button1.BackColor = button1ColorA;
+            button2.BackColor = button2ColorA;
+            button3.BackColor = button3ColorA;
+            button4.BackColor = button4ColorA;
+            button5.BackColor = button5ColorA;
+            button6.BackColor = button6ColorA;
+            button7.BackColor = button7ColorA;
+            button8.BackColor = button8ColorA;
+            button9.BackColor = button9ColorA;
+        }
+        
+        private void button_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (sender == button1) button1.BackColor = button1ColorB;
+            if (sender == button2) button2.BackColor = button2ColorB;
+            if (sender == button3) button3.BackColor = button3ColorB;
+            if (sender == button4) button4.BackColor = button4ColorB;
+            if (sender == button5) button5.BackColor = button5ColorB;
+            if (sender == button6) button6.BackColor = button6ColorB;
+            if (sender == button7) button7.BackColor = button7ColorB;
+            if (sender == button8) button8.BackColor = button8ColorB;
+            if (sender == button9) button9.BackColor = button9ColorB;
         }
 
-       
+        private void button_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (sender == button1) button1.BackColor = button1ColorA;
+            if (sender == button2) button2.BackColor = button2ColorA;
+            if (sender == button3) button3.BackColor = button3ColorA;
+            if (sender == button4) button4.BackColor = button4ColorA;
+            if (sender == button5) button5.BackColor = button5ColorA;
+            if (sender == button6) button6.BackColor = button6ColorA;
+            if (sender == button7) button7.BackColor = button7ColorA;
+            if (sender == button8) button8.BackColor = button8ColorA;
+            if (sender == button9) button9.BackColor = button9ColorA;
+        }
     }
 }

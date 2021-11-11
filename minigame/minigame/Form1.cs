@@ -160,5 +160,10 @@ namespace minigame
             if (sender == button8) button8.BackColor = button8ColorA;
             if (sender == button9) button9.BackColor = button9ColorA;
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

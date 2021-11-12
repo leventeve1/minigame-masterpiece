@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,14 +18,14 @@ namespace minigame
         List<int> gepSorrend = new List<int>() { };
         List<int> jatekosSorrend = new List<int>() { };
         int körCounter = 0;
-
-        public static Color button1ColorA = Color.FromArgb(255, 128, 128);
-        public static Color button2ColorA = Color.FromArgb(255, 192, 128);
-        public static Color button3ColorA = Color.FromArgb(255, 255, 128);
-        public static Color button4ColorA = Color.FromArgb(128, 255, 128);
-        public static Color button5ColorA = Color.FromArgb(128, 255, 255);
-        public static Color button6ColorA = Color.FromArgb(128, 128, 255);
-        public static Color button7ColorA = Color.FromArgb(255, 128, 255);
+        
+        public static Color button1ColorA = Color.FromArgb(255, 192, 192);
+        public static Color button2ColorA = Color.FromArgb(255, 224, 192);
+        public static Color button3ColorA = Color.FromArgb(255, 255, 192);
+        public static Color button4ColorA = Color.FromArgb(192, 255, 192);
+        public static Color button5ColorA = Color.FromArgb(192, 255, 255);
+        public static Color button6ColorA = Color.FromArgb(192, 192, 255);
+        public static Color button7ColorA = Color.FromArgb(255, 192, 255);
         public static Color button8ColorA = Color.Gray;
         public static Color button9ColorA = Color.Silver;
 
@@ -80,7 +81,7 @@ namespace minigame
             körCounter = 1;
             round_value.Text = körCounter.ToString();
             körFV();
-            
+
         }
 
         private void submit_Click(object sender, EventArgs e)

@@ -17,10 +17,8 @@ namespace minigame
 {
     public partial class Form1 : Form
     {
-        SoundPlayer correct = new SoundPlayer("sound/correct2.wav");
-        SoundPlayer gameover = new SoundPlayer("sound/wrong.wav");
-
-
+        SoundPlayer correctSound = new SoundPlayer("sound/correct2.wav");
+        SoundPlayer gameoverSound = new SoundPlayer("sound/wrong.wav");
 
         List<int> gepSorrend = new List<int>() { };
         List<int> jatekosSorrend = new List<int>() { };
@@ -49,10 +47,10 @@ namespace minigame
         public Form1()
         {
             InitializeComponent();
-            
         }
         public void körFV()
         {
+            Thread.Sleep(500);
             Random randomSzam = new Random();
             int hanyadikGomb = randomSzam.Next(1, 10);
             gepSorrend.Add(hanyadikGomb);
@@ -64,7 +62,6 @@ namespace minigame
                 Thread.Sleep(400);
             }
             jatekosSorrend = new List<int>();
-            
         }
 
         public bool  ellenorzesFV()
@@ -75,11 +72,9 @@ namespace minigame
             }
             else
             {
-                Thread.Sleep(500);
-                gameover.Play();
+                gameoverSound.Play();
                 MessageBox.Show("Hibás! A játék véget ért!");
                 return false;
-                
             }
         }
 
@@ -91,24 +86,18 @@ namespace minigame
             körCounter = 1;
             round_value.Text = körCounter.ToString();
             körFV();
-
         }
 
         private void submit_Click(object sender, EventArgs e)
         {
             if (ellenorzesFV())
             {
-                correct.Play();
+                correctSound.Play();
                 körCounter++;
                 round_value.Text = körCounter.ToString();
                 körFV();
-                
-                
-               
-
             }
 
-           
             else if (int.Parse(high_score_value.Text)<körCounter-1)
             {
                 high_score_value.Text= (körCounter-1).ToString();
@@ -178,16 +167,6 @@ namespace minigame
             if (sender == button7) button7.BackColor = button7ColorA;
             if (sender == button8) button8.BackColor = button8ColorA;
             if (sender == button9) button9.BackColor = button9ColorA;
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            gameover.Play();
         }
     }
 }

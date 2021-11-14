@@ -25,26 +25,26 @@ namespace minigame
         List<int> gepSorrend = new List<int>() { };
         List<int> jatekosSorrend = new List<int>() { };
         int körCounter = 0;
-        
-        public static Color button1ColorA = Color.FromArgb(255, 192, 192);
-        public static Color button2ColorA = Color.FromArgb(255, 224, 192);
-        public static Color button3ColorA = Color.FromArgb(255, 255, 192);
-        public static Color button4ColorA = Color.FromArgb(192, 255, 192);
-        public static Color button5ColorA = Color.FromArgb(192, 255, 255);
-        public static Color button6ColorA = Color.FromArgb(192, 192, 255);
-        public static Color button7ColorA = Color.FromArgb(255, 192, 255);
-        public static Color button8ColorA = Color.Gray;
-        public static Color button9ColorA = Color.Silver;
 
-        public static Color button1ColorB = Color.Red;
-        public static Color button2ColorB = Color.Orange;
-        public static Color button3ColorB = Color.Yellow;
-        public static Color button4ColorB = Color.Lime;
-        public static Color button5ColorB = Color.Aqua;
-        public static Color button6ColorB = Color.Blue;
-        public static Color button7ColorB = Color.Fuchsia;
-        public static Color button8ColorB = Color.FromArgb(64,64,64);
-        public static Color button9ColorB = Color.White;
+        public static Color button1ColorA = Color.Red;
+        public static Color button2ColorA = Color.Orange;
+        public static Color button3ColorA = Color.Yellow;
+        public static Color button4ColorA = Color.Lime;
+        public static Color button5ColorA = Color.Aqua;
+        public static Color button6ColorA = Color.Blue;
+        public static Color button7ColorA = Color.Fuchsia;
+        public static Color button8ColorA = Color.FromArgb(64, 64, 64);
+        public static Color button9ColorA = Color.White;
+
+        public static Color button1ColorB = Color.FromArgb(255, 192, 192);
+        public static Color button2ColorB = Color.FromArgb(255, 224, 192);
+        public static Color button3ColorB = Color.FromArgb(255, 255, 192);
+        public static Color button4ColorB = Color.FromArgb(192, 255, 192);
+        public static Color button5ColorB = Color.FromArgb(192, 255, 255);
+        public static Color button6ColorB = Color.FromArgb(192, 192, 255);
+        public static Color button7ColorB = Color.FromArgb(255, 192, 255);
+        public static Color button8ColorB = Color.Gray;
+        public static Color button9ColorB = Color.DarkGray;
 
         public Form1()
         {

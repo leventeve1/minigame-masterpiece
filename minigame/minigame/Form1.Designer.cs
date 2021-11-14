@@ -52,7 +52,7 @@ namespace minigame
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(135, 148);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -66,7 +66,7 @@ namespace minigame
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.button2.BackColor = System.Drawing.Color.Orange;
             this.button2.Location = new System.Drawing.Point(217, 148);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
@@ -79,7 +79,7 @@ namespace minigame
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button3.BackColor = System.Drawing.Color.Yellow;
             this.button3.Location = new System.Drawing.Point(297, 148);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
@@ -92,7 +92,7 @@ namespace minigame
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button4.BackColor = System.Drawing.Color.Lime;
             this.button4.Location = new System.Drawing.Point(135, 229);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
@@ -105,7 +105,7 @@ namespace minigame
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button5.BackColor = System.Drawing.Color.Aqua;
             this.button5.Location = new System.Drawing.Point(217, 229);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
@@ -118,7 +118,7 @@ namespace minigame
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button6.BackColor = System.Drawing.Color.Blue;
             this.button6.Location = new System.Drawing.Point(297, 229);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
@@ -131,7 +131,7 @@ namespace minigame
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button7.BackColor = System.Drawing.Color.Fuchsia;
             this.button7.Location = new System.Drawing.Point(135, 311);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
@@ -144,7 +144,7 @@ namespace minigame
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.Gray;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button8.Location = new System.Drawing.Point(217, 311);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button8.Name = "button8";
@@ -157,7 +157,7 @@ namespace minigame
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.Silver;
+            this.button9.BackColor = System.Drawing.Color.White;
             this.button9.Location = new System.Drawing.Point(297, 311);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button9.Name = "button9";
@@ -172,11 +172,11 @@ namespace minigame
             // 
             this.round.AutoSize = true;
             this.round.BackColor = System.Drawing.Color.Transparent;
-            this.round.Font = new System.Drawing.Font("Encode Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.round.Font = new System.Drawing.Font("Encode Sans", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.round.ForeColor = System.Drawing.Color.White;
-            this.round.Location = new System.Drawing.Point(636, 148);
+            this.round.Location = new System.Drawing.Point(604, 148);
             this.round.Name = "round";
-            this.round.Size = new System.Drawing.Size(77, 33);
+            this.round.Size = new System.Drawing.Size(129, 56);
             this.round.TabIndex = 9;
             this.round.Text = "Round:";
             // 
@@ -184,23 +184,23 @@ namespace minigame
             // 
             this.high_score.AutoSize = true;
             this.high_score.BackColor = System.Drawing.Color.Transparent;
-            this.high_score.Font = new System.Drawing.Font("Encode Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.high_score.Font = new System.Drawing.Font("Encode Sans", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.high_score.ForeColor = System.Drawing.Color.White;
-            this.high_score.Location = new System.Drawing.Point(601, 190);
+            this.high_score.Location = new System.Drawing.Point(544, 229);
             this.high_score.Name = "high_score";
-            this.high_score.Size = new System.Drawing.Size(112, 33);
+            this.high_score.Size = new System.Drawing.Size(189, 56);
             this.high_score.TabIndex = 10;
             this.high_score.Text = "High score:";
             // 
             // new_game
             // 
             this.new_game.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.new_game.Font = new System.Drawing.Font("Encode Sans Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.new_game.Font = new System.Drawing.Font("Encode Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.new_game.ForeColor = System.Drawing.Color.White;
-            this.new_game.Location = new System.Drawing.Point(135, 493);
+            this.new_game.Location = new System.Drawing.Point(186, 473);
             this.new_game.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.new_game.Name = "new_game";
-            this.new_game.Size = new System.Drawing.Size(75, 75);
+            this.new_game.Size = new System.Drawing.Size(134, 75);
             this.new_game.TabIndex = 11;
             this.new_game.Text = "New game";
             this.new_game.UseVisualStyleBackColor = false;
@@ -210,11 +210,11 @@ namespace minigame
             // 
             this.round_value.AutoSize = true;
             this.round_value.BackColor = System.Drawing.Color.Transparent;
-            this.round_value.Font = new System.Drawing.Font("Encode Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.round_value.Font = new System.Drawing.Font("Encode Sans", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.round_value.ForeColor = System.Drawing.Color.White;
-            this.round_value.Location = new System.Drawing.Point(741, 148);
+            this.round_value.Location = new System.Drawing.Point(739, 148);
             this.round_value.Name = "round_value";
-            this.round_value.Size = new System.Drawing.Size(27, 33);
+            this.round_value.Size = new System.Drawing.Size(45, 56);
             this.round_value.TabIndex = 12;
             this.round_value.Text = "0";
             // 
@@ -222,18 +222,18 @@ namespace minigame
             // 
             this.high_score_value.AutoSize = true;
             this.high_score_value.BackColor = System.Drawing.Color.Transparent;
-            this.high_score_value.Font = new System.Drawing.Font("Encode Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.high_score_value.Font = new System.Drawing.Font("Encode Sans", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.high_score_value.ForeColor = System.Drawing.Color.White;
-            this.high_score_value.Location = new System.Drawing.Point(741, 191);
+            this.high_score_value.Location = new System.Drawing.Point(739, 229);
             this.high_score_value.Name = "high_score_value";
-            this.high_score_value.Size = new System.Drawing.Size(27, 33);
+            this.high_score_value.Size = new System.Drawing.Size(45, 56);
             this.high_score_value.TabIndex = 13;
             this.high_score_value.Text = "0";
             // 
             // submit
             // 
             this.submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
-            this.submit.Font = new System.Drawing.Font("Encode Sans Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.submit.Font = new System.Drawing.Font("Encode Sans ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.submit.ForeColor = System.Drawing.Color.White;
             this.submit.Location = new System.Drawing.Point(135, 392);
             this.submit.Margin = new System.Windows.Forms.Padding(4);
@@ -248,11 +248,11 @@ namespace minigame
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Encode Sans Expanded Medium", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Encode Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(266, 24);
+            this.label1.Location = new System.Drawing.Point(124, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 54);
+            this.label1.Size = new System.Drawing.Size(241, 65);
             this.label1.TabIndex = 15;
             this.label1.Text = "Simon says";
             // 
@@ -260,17 +260,17 @@ namespace minigame
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(491, 30);
+            this.pictureBox1.Location = new System.Drawing.Point(371, 34);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -297,6 +297,8 @@ namespace minigame
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simon says";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

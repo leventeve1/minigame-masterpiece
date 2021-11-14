@@ -250,7 +250,7 @@ namespace minigame
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Encode Sans", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(124, 15);
+            this.label1.Location = new System.Drawing.Point(124, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 65);
             this.label1.TabIndex = 15;

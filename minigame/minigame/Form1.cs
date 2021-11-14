@@ -10,10 +10,17 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
+
 namespace minigame
 {
     public partial class Form1 : Form
     {
+        SoundPlayer correct = new SoundPlayer("sound/correct2.wav");
+        SoundPlayer gameover = new SoundPlayer("sound/wrong.wav");
+
+
 
         List<int> gepSorrend = new List<int>() { };
         List<int> jatekosSorrend = new List<int>() { };
@@ -42,6 +49,7 @@ namespace minigame
         public Form1()
         {
             InitializeComponent();
+            
         }
         public void körFV()
         {
@@ -59,7 +67,7 @@ namespace minigame
             
         }
 
-        public bool ellenorzesFV()
+        public bool  ellenorzesFV()
         {
             if (gepSorrend.SequenceEqual(jatekosSorrend))
             {
@@ -67,6 +75,8 @@ namespace minigame
             }
             else
             {
+                Thread.Sleep(500);
+                gameover.Play();
                 MessageBox.Show("Hibás! A játék véget ért!");
                 return false;
                 
@@ -88,14 +98,22 @@ namespace minigame
         {
             if (ellenorzesFV())
             {
+                correct.Play();
                 körCounter++;
                 round_value.Text = körCounter.ToString();
                 körFV();
+                
+                
+               
+
             }
+
+           
             else if (int.Parse(high_score_value.Text)<körCounter-1)
             {
                 high_score_value.Text= (körCounter-1).ToString();
             }
+            
         }
         private void button_Click(object sender, EventArgs e)
         {
@@ -165,6 +183,11 @@ namespace minigame
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            gameover.Play();
         }
     }
 }

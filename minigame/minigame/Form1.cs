@@ -17,13 +17,11 @@ namespace minigame
 {
     public partial class Form1 : Form
     {
+        //sound files
         SoundPlayer correctSound = new SoundPlayer("sound/correct2.wav");
-        SoundPlayer gameoverSound = new SoundPlayer("sound/wrong.wav");
+        SoundPlayer gameOverSound = new SoundPlayer("sound/wrong.wav");
 
-        List<int> gepSorrend = new List<int>() { };
-        List<int> jatekosSorrend = new List<int>() { };
-        int körCounter = 0;
-
+        //buttons default colors
         public static Color button1ColorA = Color.Red;
         public static Color button2ColorA = Color.Orange;
         public static Color button3ColorA = Color.Yellow;
@@ -34,6 +32,7 @@ namespace minigame
         public static Color button8ColorA = Color.FromArgb(64, 64, 64);
         public static Color button9ColorA = Color.White;
 
+        //buttons pressed colors
         public static Color button1ColorB = Color.FromArgb(255, 192, 192);
         public static Color button2ColorB = Color.FromArgb(255, 224, 192);
         public static Color button3ColorB = Color.FromArgb(255, 255, 192);
@@ -44,94 +43,114 @@ namespace minigame
         public static Color button8ColorB = Color.Gray;
         public static Color button9ColorB = Color.DarkGray;
 
+        
+        List<int> generatedSequence = new List<int>() { };
+        List<int> playerSequence = new List<int>() { };
+
+        int roundCounter = 0;
+        int firstRound = 1;
+        int timeBeforeRoundStart = 500;
+        int timeBetweenButtonFlashes = 400;
+        int changedButtonColorDuration = 800;
+        string gameOverText = "Wrong! Game over!";
+
+
         public Form1()
         {
             InitializeComponent();
         }
-        public void körFV()
-        {
-            Thread.Sleep(500);
-            Random randomSzam = new Random();
-            int hanyadikGomb = randomSzam.Next(1, 10);
-            gepSorrend.Add(hanyadikGomb);
 
-            foreach (var elem in gepSorrend)
-            {
-                szinezo(elem);
-                Application.DoEvents();
-                Thread.Sleep(400);
-            }
-            jatekosSorrend = new List<int>();
+
+        private void new_game_Click(object sender, EventArgs e)
+        {
+            generatedSequence = new List<int>();
+            playerSequence = new List<int>();
+            roundCounter = firstRound;
+            roundValue.Text = roundCounter.ToString();
+            NextRound();
         }
 
-        public bool  ellenorzesFV()
+
+        public void NextRound()
         {
-            if (gepSorrend.SequenceEqual(jatekosSorrend))
+            Thread.Sleep(timeBeforeRoundStart);
+            Random randomNumber = new Random();
+            generatedSequence.Add(randomNumber.Next(1, 10));
+
+            foreach (var button in generatedSequence)
+            {
+                ChangeColor(button);
+
+                Application.DoEvents();
+                Thread.Sleep(timeBetweenButtonFlashes);
+            }
+            playerSequence = new List<int>();
+        }
+
+        private void submit_Click(object sender, EventArgs e)
+        {
+            if (IsItCorrect())
+            {
+                correctSound.Play();
+                roundCounter++;
+                roundValue.Text = roundCounter.ToString();
+                NextRound();
+            }
+
+            else if (int.Parse(highScoreValue.Text) < roundCounter - 1)
+            {
+                highScoreValue.Text = (roundCounter - 1).ToString();
+            }
+        }
+
+
+        public bool  IsItCorrect()
+        {
+            if (generatedSequence.SequenceEqual(playerSequence))
             {
                 return true;
             }
             else
             {
-                gameoverSound.Play();
-                MessageBox.Show("Hibás! A játék véget ért!");
+                gameOverSound.Play();
+                MessageBox.Show(gameOverText);
                 return false;
             }
         }
 
-        private void new_game_Click(object sender, EventArgs e)
-        {
-            //új játék
-            gepSorrend = new List<int>();
-            jatekosSorrend = new List<int>();
-            körCounter = 1;
-            round_value.Text = körCounter.ToString();
-            körFV();
-        }
 
-        private void submit_Click(object sender, EventArgs e)
-        {
-            if (ellenorzesFV())
-            {
-                correctSound.Play();
-                körCounter++;
-                round_value.Text = körCounter.ToString();
-                körFV();
-            }
 
-            else if (int.Parse(high_score_value.Text)<körCounter-1)
-            {
-                high_score_value.Text= (körCounter-1).ToString();
-            }
-            
-        }
         private void button_Click(object sender, EventArgs e)
         {
-            if (sender == button1) jatekosSorrend.Add(1);
-            if (sender == button2) jatekosSorrend.Add(2);
-            if (sender == button3) jatekosSorrend.Add(3);
-            if (sender == button4) jatekosSorrend.Add(4);
-            if (sender == button5) jatekosSorrend.Add(5);
-            if (sender == button6) jatekosSorrend.Add(6);
-            if (sender == button7) jatekosSorrend.Add(7);
-            if (sender == button8) jatekosSorrend.Add(8);
-            if (sender == button9) jatekosSorrend.Add(9);
+            if (sender == button1) playerSequence.Add(1);
+            if (sender == button2) playerSequence.Add(2);
+            if (sender == button3) playerSequence.Add(3);
+            if (sender == button4) playerSequence.Add(4);
+            if (sender == button5) playerSequence.Add(5);
+            if (sender == button6) playerSequence.Add(6);
+            if (sender == button7) playerSequence.Add(7);
+            if (sender == button8) playerSequence.Add(8);
+            if (sender == button9) playerSequence.Add(9);
         }
-        public void szinezo(int sorszam)
+
+
+        public void ChangeColor(int number)
         {
-            //adott gombot átszínezi, majd vissza
-            if (sorszam == 1) button1.BackColor = button1ColorB;
-            if (sorszam == 2) button2.BackColor = button2ColorB;
-            if (sorszam == 3) button3.BackColor = button3ColorB;
-            if (sorszam == 4) button4.BackColor = button4ColorB;
-            if (sorszam == 5) button5.BackColor = button5ColorB;
-            if (sorszam == 6) button6.BackColor = button6ColorB;
-            if (sorszam == 7) button7.BackColor = button7ColorB;
-            if (sorszam == 8) button8.BackColor = button8ColorB;
-            if (sorszam == 9) button9.BackColor = button9ColorB;
+            //changing the color
+            if (number == 1) button1.BackColor = button1ColorB;
+            if (number == 2) button2.BackColor = button2ColorB;
+            if (number == 3) button3.BackColor = button3ColorB;
+            if (number == 4) button4.BackColor = button4ColorB;
+            if (number == 5) button5.BackColor = button5ColorB;
+            if (number == 6) button6.BackColor = button6ColorB;
+            if (number == 7) button7.BackColor = button7ColorB;
+            if (number == 8) button8.BackColor = button8ColorB;
+            if (number == 9) button9.BackColor = button9ColorB;
 
             Application.DoEvents();
-            Thread.Sleep(800);
+            Thread.Sleep(changedButtonColorDuration);
 
+            //changing it back
             button1.BackColor = button1ColorA;
             button2.BackColor = button2ColorA;
             button3.BackColor = button3ColorA;
@@ -143,6 +162,7 @@ namespace minigame
             button9.BackColor = button9ColorA;
         }
         
+
         private void button_MouseDown(object sender, MouseEventArgs e)
         {
             if (sender == button1) button1.BackColor = button1ColorB;
@@ -155,6 +175,7 @@ namespace minigame
             if (sender == button8) button8.BackColor = button8ColorB;
             if (sender == button9) button9.BackColor = button9ColorB;
         }
+
 
         private void button_MouseUp(object sender, MouseEventArgs e)
         {

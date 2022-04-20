@@ -42,8 +42,8 @@ namespace minigame
             this.round = new System.Windows.Forms.Label();
             this.high_score = new System.Windows.Forms.Label();
             this.new_game = new System.Windows.Forms.Button();
-            this.round_value = new System.Windows.Forms.Label();
-            this.high_score_value = new System.Windows.Forms.Label();
+            this.roundValue = new System.Windows.Forms.Label();
+            this.highScoreValue = new System.Windows.Forms.Label();
             this.submit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -210,29 +210,29 @@ namespace minigame
             // 
             // round_value
             // 
-            this.round_value.AutoSize = true;
-            this.round_value.BackColor = System.Drawing.Color.Transparent;
-            this.round_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.round_value.ForeColor = System.Drawing.Color.White;
-            this.round_value.Location = new System.Drawing.Point(591, 118);
-            this.round_value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.round_value.Name = "round_value";
-            this.round_value.Size = new System.Drawing.Size(29, 31);
-            this.round_value.TabIndex = 12;
-            this.round_value.Text = "0";
+            this.roundValue.AutoSize = true;
+            this.roundValue.BackColor = System.Drawing.Color.Transparent;
+            this.roundValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.roundValue.ForeColor = System.Drawing.Color.White;
+            this.roundValue.Location = new System.Drawing.Point(591, 118);
+            this.roundValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.roundValue.Name = "round_value";
+            this.roundValue.Size = new System.Drawing.Size(29, 31);
+            this.roundValue.TabIndex = 12;
+            this.roundValue.Text = "0";
             // 
             // high_score_value
             // 
-            this.high_score_value.AutoSize = true;
-            this.high_score_value.BackColor = System.Drawing.Color.Transparent;
-            this.high_score_value.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.high_score_value.ForeColor = System.Drawing.Color.White;
-            this.high_score_value.Location = new System.Drawing.Point(591, 183);
-            this.high_score_value.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.high_score_value.Name = "high_score_value";
-            this.high_score_value.Size = new System.Drawing.Size(29, 31);
-            this.high_score_value.TabIndex = 13;
-            this.high_score_value.Text = "0";
+            this.highScoreValue.AutoSize = true;
+            this.highScoreValue.BackColor = System.Drawing.Color.Transparent;
+            this.highScoreValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.highScoreValue.ForeColor = System.Drawing.Color.White;
+            this.highScoreValue.Location = new System.Drawing.Point(591, 183);
+            this.highScoreValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.highScoreValue.Name = "high_score_value";
+            this.highScoreValue.Size = new System.Drawing.Size(29, 31);
+            this.highScoreValue.TabIndex = 13;
+            this.highScoreValue.Text = "0";
             // 
             // submit
             // 
@@ -283,8 +283,8 @@ namespace minigame
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.submit);
-            this.Controls.Add(this.high_score_value);
-            this.Controls.Add(this.round_value);
+            this.Controls.Add(this.highScoreValue);
+            this.Controls.Add(this.roundValue);
             this.Controls.Add(this.new_game);
             this.Controls.Add(this.high_score);
             this.Controls.Add(this.round);
@@ -325,8 +325,8 @@ namespace minigame
         private System.Windows.Forms.Label round;
         private System.Windows.Forms.Label high_score;
         private System.Windows.Forms.Button new_game;
-        private System.Windows.Forms.Label round_value;
-        private System.Windows.Forms.Label high_score_value;
+        private System.Windows.Forms.Label roundValue;
+        private System.Windows.Forms.Label highScoreValue;
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;

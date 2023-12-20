@@ -1,5 +1,5 @@
 # minigame-masterpiece
-lvl3 SD kurzus beadandó
+BITClub lvl-3 SD kurzus beadandó
 --------------------
 Simon says memóriajáték
 --------------------
